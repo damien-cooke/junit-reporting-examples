@@ -19,9 +19,7 @@
     "allure:serve": "npx allure-commandline serve allure-results",
   "allure:preview": "npx http-server allure-report -p 41383 -c-1",
     "test:playwright:allure": "playwright test; npm run allure:generate",
-  "robot:venv": "python3 -m venv .venv && . .venv/bin/activate && pip install -U pip && pip install -r robot/requirements.txt && rfbrowser init",
-  "robot:test": ". .venv/bin/activate && robot -d robot/output robot/tests.robot",
-  "robot:stage": "rm -rf pages/robot && mkdir -p pages/robot && cp -r robot/output/* pages/robot/",
+  
   "extent:stage": "if [ -f monocart-report/index.html ]; then rm -rf pages/extent && mkdir -p pages/extent && cp monocart-report/index.html pages/extent/index.html; fi",
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
