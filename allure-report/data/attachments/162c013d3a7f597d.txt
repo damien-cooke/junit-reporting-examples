@@ -1,0 +1,3 @@
+dashboard loaded in 853ms
+calculator loaded in 636ms
+users loaded in 673ms

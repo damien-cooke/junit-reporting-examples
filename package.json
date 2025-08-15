@@ -14,6 +14,11 @@
     "test:playwright:headed": "playwright test --headed",
     "test:playwright:debug": "playwright test --debug",
     "test:all": "npm run test:ci && npm run test:playwright",
+    "allure:generate": "sh -c '[ -d allure-results ] && npx allure-commandline generate --clean allure-results -o allure-report || npx allure-commandline generate --clean . -o allure-report'",
+    "allure:open": "npx allure-commandline open allure-report",
+    "allure:serve": "npx allure-commandline serve allure-results",
+  "allure:preview": "npx http-server allure-report -p 41383 -c-1",
+    "test:playwright:allure": "playwright test; npm run allure:generate",
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
     "playwright:install": "playwright install"
@@ -30,6 +35,8 @@
   "devDependencies": {
     "@playwright/test": "^1.40.0",
     "@types/jest": "^29.5.5",
+    "allure-commandline": "^2.34.1",
+    "allure-playwright": "^2.14.0",
     "jest": "^29.7.0",
     "jest-junit": "^16.0.0",
     "nodemon": "^3.0.1",

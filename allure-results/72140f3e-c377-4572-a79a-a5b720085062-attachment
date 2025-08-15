@@ -1,0 +1,45 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - text:  Large dataset (100 numbers) loaded successfully!
+  - button
+  - link " JUnit Testing Examples":
+    - /url: /
+  - list:
+    - listitem:
+      - link "Dashboard":
+        - /url: /
+    - listitem:
+      - link "Calculator":
+        - /url: /calculator.html
+    - listitem:
+      - link "Users":
+        - /url: /users.html
+    - listitem:
+      - link "Data Processing":
+        - /url: /data.html
+- heading " Data Processing" [level=1]
+- heading "Data Input" [level=5]
+- text: Enter Data (comma-separated numbers)
+- textbox "Enter Data (comma-separated numbers)": 551, 951, 138, 745, 339, 532, 182, 38, 534, 113, 655, 145, 428, 388, 832, 61, 373, 83, 923, 640, 42, 781, 671, 64, 749, 980, 387, 911, 94, 251, 835, 157, 900, 119, 210, 310, 332, 898, 194, 244, 201, 661, 242, 131, 112, 454, 254, 966, 115, 369, 771, 137, 808, 176, 387, 239, 427, 397, 265, 859, 138, 358, 49, 496, 596, 227, 980, 688, 625, 627, 81, 139, 798, 180, 585, 928, 69, 226, 955, 589, 219, 755, 452, 900, 894, 843, 707, 706, 407, 885, 529, 843, 201, 975, 689, 548, 820, 388, 708, 313
+- text: Quick Data Sets
+- 'button "Sample: 1-10"'
+- 'button "Sample: Random 20"'
+- 'button "Sample: Large Dataset"'
+- button "Clear Data"
+- heading "Basic Analysis" [level=5]
+- button " Analyze Data"
+- button " Validate"
+- button " Sort"
+- heading "Data Transformation" [level=5]
+- button " Double Values"
+- button " Square Values"
+- spinbutton
+- button " Filter >"
+- heading "Results" [level=5]
+- alert:  Process some data to see results here.
+- heading "Data Visualization" [level=5]
+- text: 
+- paragraph: Charts will appear here after processing data
+```

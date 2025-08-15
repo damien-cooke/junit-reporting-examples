@@ -17,17 +17,19 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
-    ['html'],
+    ['html', { open: 'never' }],
     ['junit', { outputFile: 'test-results/playwright-results.xml' }],
-    ['json', { outputFile: 'test-results/playwright-results.json' }]
+  ['json', { outputFile: 'test-results/playwright-results.json' }],
+  // Allure results for Playwright E2E tests
+  ['allure-playwright', { outputFolder: 'allure-results' }]
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: 'http://localhost:3000',
 
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+  /* Collect trace on failures so Allure includes it without requiring a retry */
+  trace: 'retain-on-failure',
 
     /* Screenshot on failure */
     screenshot: 'only-on-failure',
@@ -36,7 +38,9 @@ export default defineConfig({
     video: 'retain-on-failure',
 
     /* Viewport size */
-    viewport: { width: 1280, height: 720 },
+  viewport: { width: 1280, height: 720 },
+  // Fail faster on missing elements/actions
+  actionTimeout: 2 * 1000,
   },
 
   /* Configure projects for major browsers */
@@ -86,7 +90,7 @@ export default defineConfig({
   },
 
   /* Global test timeout */
-  timeout: 30 * 1000,
+  timeout: 5 * 1000,
 
   /* Expect timeout */
   expect: {

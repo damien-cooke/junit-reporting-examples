@@ -1,0 +1,104 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - link " JUnit Testing Examples":
+    - /url: /
+  - list:
+    - listitem:
+      - link "Dashboard":
+        - /url: /
+    - listitem:
+      - link "Calculator":
+        - /url: /calculator.html
+    - listitem:
+      - link "Users":
+        - /url: /users.html
+    - listitem:
+      - link "Data Processing":
+        - /url: /data.html
+- heading " JUnit Testing Examples Dashboard" [level=1]
+- heading "API Status" [level=4]
+- paragraph: Checking...
+- text: 
+- heading "Total Users" [level=4]
+- paragraph: Loading...
+- text: 
+- heading "Uptime" [level=4]
+- paragraph: Loading...
+- text: 
+- heading "Last Updated" [level=4]
+- paragraph: Just now
+- text: 
+- heading " Calculator" [level=5]
+- paragraph: Test mathematical operations and calculations with comprehensive error handling.
+- list:
+  - listitem:  Basic operations
+  - listitem:  Advanced functions
+  - listitem:  Error validation
+- link " Open Calculator":
+  - /url: /calculator.html
+- heading " User Management" [level=5]
+- paragraph: Manage users with full CRUD operations and validation testing.
+- list:
+  - listitem:  Create & Edit users
+  - listitem:  Search functionality
+  - listitem:  Form validation
+- link " Manage Users":
+  - /url: /users.html
+- heading " Data Processing" [level=5]
+- paragraph: Process and analyze data with various transformation and validation tools.
+- list:
+  - listitem:  Data analysis
+  - listitem:  Transformations
+  - listitem:  Validation rules
+- link " Process Data":
+  - /url: /data.html
+- heading " API Endpoints" [level=5]
+- heading "Health & Info" [level=6]
+- list:
+  - listitem:
+    - code: GET /health
+    - text: "- System health check"
+  - listitem:
+    - code: GET /
+    - text: "- API information"
+- heading "Calculator" [level=6]
+- list:
+  - listitem:
+    - code: POST /api/calculator/add
+  - listitem:
+    - code: POST /api/calculator/subtract
+  - listitem:
+    - code: POST /api/calculator/multiply
+  - listitem:
+    - code: POST /api/calculator/divide
+- heading "Users" [level=6]
+- list:
+  - listitem:
+    - code: GET /api/users
+    - text: "- List all users"
+  - listitem:
+    - code: POST /api/users
+    - text: "- Create user"
+  - listitem:
+    - code: GET /api/users/:id
+    - text: "- Get user"
+  - listitem:
+    - code: PUT /api/users/:id
+    - text: "- Update user"
+  - listitem:
+    - code: DELETE /api/users/:id
+    - text: "- Delete user"
+- heading "Data Processing" [level=6]
+- list:
+  - listitem:
+    - code: POST /api/data/process
+  - listitem:
+    - code: POST /api/data/filter
+  - listitem:
+    - code: POST /api/data/transform
+- contentinfo:
+  - paragraph: © 2025 JUnit Reporting Examples. Built for testing reporting tools.
+  - paragraph:  Made with Node.js & Express
+```

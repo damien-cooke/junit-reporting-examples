@@ -1,0 +1,45 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - text:  Data processed successfully (local mode)!
+  - button
+  - text:  Large dataset (100 numbers) loaded successfully!
+  - button
+  - link " JUnit Testing Examples":
+    - /url: /
+  - list:
+    - listitem:
+      - link "Dashboard":
+        - /url: /
+    - listitem:
+      - link "Calculator":
+        - /url: /calculator.html
+    - listitem:
+      - link "Users":
+        - /url: /users.html
+    - listitem:
+      - link "Data Processing":
+        - /url: /data.html
+- heading " Data Processing" [level=1]
+- heading "Data Input" [level=5]
+- text: Enter Data (comma-separated numbers)
+- textbox "Enter Data (comma-separated numbers)": 22, 955, 618, 841, 342, 600, 368, 525, 643, 13, 384, 858, 586, 246, 509, 419, 45, 976, 620, 901, 681, 342, 801, 604, 115, 832, 141, 283, 816, 876, 530, 388, 872, 869, 373, 332, 234, 956, 913, 811, 404, 46, 279, 569, 483, 396, 755, 15, 48, 973, 253, 398, 991, 578, 238, 670, 845, 664, 368, 389, 990, 947, 332, 683, 251, 254, 195, 77, 269, 104, 66, 312, 807, 176, 196, 828, 377, 575, 67, 777, 954, 681, 44, 214, 395, 719, 749, 193, 704, 886, 560, 914, 60, 519, 214, 434, 524, 87, 427, 803
+- text: Quick Data Sets
+- 'button "Sample: 1-10"'
+- 'button "Sample: Random 20"'
+- 'button "Sample: Large Dataset"'
+- button "Clear Data"
+- heading "Basic Analysis" [level=5]
+- button " Analyze Data"
+- button " Validate"
+- button " Sort"
+- heading "Data Transformation" [level=5]
+- button " Double Values"
+- button " Square Values"
+- spinbutton
+- button " Filter >"
+- heading "Results" [level=5]
+- text: "Count: 100 Sum: 49966 Mean: 499.66 Median: 496 Mode: 214, 332, 342, 368, 681 Minimum: 13 Maximum: 991 Range: 978 Variance: 86905.52 Std Dev: 294.8"
+- heading "Data Visualization" [level=5]
+```

@@ -1,0 +1,43 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - text:  Data processed successfully (local mode)!
+  - button
+  - link " JUnit Testing Examples":
+    - /url: /
+  - list:
+    - listitem:
+      - link "Dashboard":
+        - /url: /
+    - listitem:
+      - link "Calculator":
+        - /url: /calculator.html
+    - listitem:
+      - link "Users":
+        - /url: /users.html
+    - listitem:
+      - link "Data Processing":
+        - /url: /data.html
+- heading " Data Processing" [level=1]
+- heading "Data Input" [level=5]
+- text: Enter Data (comma-separated numbers)
+- textbox "Enter Data (comma-separated numbers)": "-4, 9, 16"
+- text: Quick Data Sets
+- 'button "Sample: 1-10"'
+- 'button "Sample: Random 20"'
+- 'button "Sample: Large Dataset"'
+- button "Clear Data"
+- heading "Basic Analysis" [level=5]
+- button " Analyze Data"
+- button " Validate"
+- button " Sort"
+- heading "Data Transformation" [level=5]
+- button " Double Values"
+- button " Square Values"
+- spinbutton
+- button " Filter >"
+- heading "Results" [level=5]
+- text: "Count: 3 Sum: 21 Mean: 7 Median: 9 Mode: No mode Minimum: -4 Maximum: 16 Range: 20 Variance: 68.67 Std Dev: 8.29"
+- heading "Data Visualization" [level=5]
+```

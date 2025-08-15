@@ -31,8 +31,14 @@ jobs:
       run: npm run lint || echo "No lint script found"
       continue-on-error: true
 
-    - name: Run tests
+    - name: Run Jest tests
       run: npm run test:ci
+
+    - name: Install Playwright browsers
+      run: npx playwright install --with-deps
+
+    - name: Run Playwright tests (with Allure)
+      run: npm run test:playwright
 
     - name: Upload test results
       uses: actions/upload-artifact@v4
@@ -42,6 +48,19 @@ jobs:
         path: |
           test-results/
           coverage/
+          allure-results/
+
+    - name: Generate Allure Report
+      if: always()
+      run: |
+        npx allure generate --clean allure-results -o allure-report || echo "Allure report generation failed"
+
+    - name: Upload Allure Report
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: allure-report-${{ matrix.node-version }}
+        path: allure-report/
 
     - name: Publish Test Results
       uses: dorny/test-reporter@v1
@@ -82,13 +101,3 @@ jobs:
 
     - name: Run security audit
       run: npm audit --audit-level moderate
-
-  deploy:
-    needs: [test, build]
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-    
-    steps:
-    - name: Deploy to staging
-      run: echo "Deploying to staging environment..."
-      # Add your deployment steps here

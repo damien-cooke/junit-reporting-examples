@@ -1,0 +1,41 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - link " JUnit Testing Examples":
+    - /url: /
+  - list:
+    - listitem:
+      - link "Dashboard":
+        - /url: /
+    - listitem:
+      - link "Calculator":
+        - /url: /calculator.html
+    - listitem:
+      - link "Users":
+        - /url: /users.html
+    - listitem:
+      - link "Data Processing":
+        - /url: /data.html
+- heading " Data Processing" [level=1]
+- heading "Data Input" [level=5]
+- text: Enter Data (comma-separated numbers)
+- textbox "Enter Data (comma-separated numbers)": 142, 122, 140, 146, 156, 112, 178, 172, 178, 200, 134, 148
+- text: Quick Data Sets
+- 'button "Sample: 1-10"'
+- 'button "Sample: Random 20"'
+- 'button "Sample: Large Dataset"'
+- button "Clear Data"
+- heading "Basic Analysis" [level=5]
+- button " Analyze Data"
+- button " Validate"
+- button " Sort"
+- heading "Data Transformation" [level=5]
+- button " Double Values"
+- button " Square Values"
+- spinbutton: "100"
+- button " Filter >"
+- heading "Results" [level=5]
+- text: "Count: 12 Sum: 1828 Mean: 152.33 Median: 147 Mode: 178 Minimum: 112 Maximum: 200 Range: 88 Variance: 599.22 Std Dev: 24.48"
+- heading "Data Visualization" [level=5]
+```

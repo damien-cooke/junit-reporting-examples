@@ -1,0 +1,69 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - link " JUnit Testing Examples":
+    - /url: /
+  - list:
+    - listitem:
+      - link "Dashboard":
+        - /url: /
+    - listitem:
+      - link "Calculator":
+        - /url: /calculator.html
+    - listitem:
+      - link "Users":
+        - /url: /users.html
+    - listitem:
+      - link "Data Processing":
+        - /url: /data.html
+- heading " Calculator" [level=1]
+- heading "Calculator Display" [level=5]
+- text: "67"
+- heading "Calculator Keypad" [level=5]
+- button "7"
+- button "8"
+- button "9"
+- button "4"
+- button "5"
+- button "6"
+- button "1"
+- button "2"
+- button "3"
+- button "0"
+- button "."
+- button "+"
+- button "-"
+- button "×"
+- button "÷"
+- button "Clear"
+- button "="
+- button "√"
+- button "x²"
+- button "⌫"
+- heading "Calculation History" [level=5]
+- text:  No calculations yet. Start calculating to see history here.
+- heading "API Results" [level=5]
+- button " Test API"
+- button " Validate Expression"
+- heading "Advanced Operations" [level=5]
+- text: Power Operation
+- spinbutton
+- spinbutton
+- button " Calculate Power"
+- text: Square Root
+- spinbutton
+- button " √"
+- text: Factorial
+- spinbutton
+- button "! n!"
+- text: Prime Number Check
+- spinbutton
+- button " Check Prime"
+- heading "Results" [level=5]
+- alert:  Results will appear here after performing calculations.
+- heading "Quick Tests" [level=5]
+- button "Test Basic Operations"
+- button "Test Advanced Functions"
+- button "Test Error Cases"
+```

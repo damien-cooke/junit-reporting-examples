@@ -1,0 +1,51 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - text:  Data processed successfully (local mode)!
+  - button
+  - text:  Filtered to 12 values greater than 100
+  - button
+  - text:  All values doubled successfully!
+  - button
+  - text:  Data processed successfully (local mode)!
+  - button
+  - text:  Random sample data (20 numbers) loaded successfully!
+  - button
+  - link " JUnit Testing Examples":
+    - /url: /
+  - list:
+    - listitem:
+      - link "Dashboard":
+        - /url: /
+    - listitem:
+      - link "Calculator":
+        - /url: /calculator.html
+    - listitem:
+      - link "Users":
+        - /url: /users.html
+    - listitem:
+      - link "Data Processing":
+        - /url: /data.html
+- heading " Data Processing" [level=1]
+- heading "Data Input" [level=5]
+- text: Enter Data (comma-separated numbers)
+- textbox "Enter Data (comma-separated numbers)": 168, 174, 172, 142, 158, 150, 144, 170, 164, 122, 130, 200
+- text: Quick Data Sets
+- 'button "Sample: 1-10"'
+- 'button "Sample: Random 20"'
+- 'button "Sample: Large Dataset"'
+- button "Clear Data"
+- heading "Basic Analysis" [level=5]
+- button " Analyze Data"
+- button " Validate"
+- button " Sort"
+- heading "Data Transformation" [level=5]
+- button " Double Values"
+- button " Square Values"
+- spinbutton: "100"
+- button " Filter >"
+- heading "Results" [level=5]
+- text: "Count: 12 Sum: 1894 Mean: 157.83 Median: 161 Mode: No mode Minimum: 122 Maximum: 200 Range: 78 Variance: 424.31 Std Dev: 20.6"
+- heading "Data Visualization" [level=5]
+```

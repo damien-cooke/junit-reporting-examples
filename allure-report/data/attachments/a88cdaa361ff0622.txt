@@ -1,0 +1,42 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - link " JUnit Testing Examples":
+    - /url: /
+  - list:
+    - listitem:
+      - link "Dashboard":
+        - /url: /
+    - listitem:
+      - link "Calculator":
+        - /url: /calculator.html
+    - listitem:
+      - link "Users":
+        - /url: /users.html
+    - listitem:
+      - link "Data Processing":
+        - /url: /data.html
+- heading " Data Processing" [level=1]
+- heading "Data Input" [level=5]
+- text: Enter Data (comma-separated numbers)
+- textbox "Enter Data (comma-separated numbers)": 831, 629, 688, 684, 496, 96, 630, 170, 644, 939, 224, 187, 399, 43, 55, 347, 155, 71, 728, 583, 193, 530, 852, 530, 732, 562, 647, 822, 303, 193, 110, 911, 153, 44, 915, 45, 301, 238, 418, 618, 749, 85, 282, 786, 576, 385, 168, 184, 576, 90, 20, 119, 957, 689, 463, 391, 368, 20, 404, 548, 36, 549, 623, 840, 174, 998, 288, 127, 200, 693, 461, 67, 384, 89, 12, 44, 296, 767, 829, 612, 893, 982, 445, 207, 506, 195, 337, 615, 872, 155, 61, 964, 842, 487, 803, 395, 75, 546, 590, 61
+- text: Quick Data Sets
+- 'button "Sample: 1-10"'
+- 'button "Sample: Random 20"'
+- 'button "Sample: Large Dataset"'
+- button "Clear Data"
+- heading "Basic Analysis" [level=5]
+- button " Analyze Data"
+- button " Validate"
+- button " Sort"
+- heading "Data Transformation" [level=5]
+- button " Double Values"
+- button " Square Values"
+- spinbutton
+- button " Filter >"
+- heading "Results" [level=5]
+- heading " Validation Results" [level=5]
+- text: "Has Negatives: No Has Decimals: No Has Outliers: No Has Duplicates: Yes Duplicate Values: 530, 193, 576, 20, 44, 155, 61 Integers: 100 Floats: 0"
+- heading "Data Visualization" [level=5]
+```

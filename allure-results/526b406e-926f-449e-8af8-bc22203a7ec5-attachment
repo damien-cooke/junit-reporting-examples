@@ -1,0 +1,125 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - link " JUnit Testing Examples":
+    - /url: /
+  - list:
+    - listitem:
+      - link "Dashboard":
+        - /url: /
+    - listitem:
+      - link "Calculator":
+        - /url: /calculator.html
+    - listitem:
+      - link "Users":
+        - /url: /users.html
+    - listitem:
+      - link "Data Processing":
+        - /url: /data.html
+- text:  5 sample users generated!
+- button
+- heading " User Management" [level=1]
+- button "+ Add User"
+- button " Generate Sample Data"
+- button " Export CSV"
+- text: Search users
+- textbox "Search users"
+- button ""
+- text: Status
+- combobox "Status":
+  - option "All" [selected]
+  - option "Active"
+  - option "Inactive"
+- button " Delete Selected (0)" [disabled]
+- heading "Search & Filter" [level=5]
+- text: Search by name or email
+- textbox "Search by name or email"
+- button ""
+- button ""
+- group:
+  - button "All Users"
+  - button "Adults (18+)"
+  - button "Minors (<18)"
+- heading "Users List" [level=5]
+- text: 0 users
+- table:
+  - rowgroup:
+    - row "ID Name Email Role Age Status Actions":
+      - cell:
+        - checkbox
+      - cell "ID"
+      - cell "Name"
+      - cell "Email"
+      - cell "Role"
+      - cell "Age"
+      - cell "Status"
+      - cell "Actions"
+  - rowgroup:
+    - row "1755257493775.4875 Alice Johnson alice@example.com admin active":
+      - cell:
+        - checkbox
+      - cell "1755257493775.4875"
+      - cell "Alice Johnson"
+      - cell "alice@example.com"
+      - cell "admin"
+      - cell "active"
+      - cell:
+        - group:
+          - button ""
+          - button ""
+    - row "1755257493775.2705 Charlie Brown charlie@example.com user active":
+      - cell:
+        - checkbox
+      - cell "1755257493775.2705"
+      - cell "Charlie Brown"
+      - cell "charlie@example.com"
+      - cell "user"
+      - cell "active"
+      - cell:
+        - group:
+          - button ""
+          - button ""
+    - row "1755257493775.5835 Diana Prince diana@example.com moderator active":
+      - cell:
+        - checkbox
+      - cell "1755257493775.5835"
+      - cell "Diana Prince"
+      - cell "diana@example.com"
+      - cell "moderator"
+      - cell "active"
+      - cell:
+        - group:
+          - button ""
+          - button ""
+    - row "1755257493775.7068 Edward Smith edward@example.com user inactive":
+      - cell:
+        - checkbox
+      - cell "1755257493775.7068"
+      - cell "Edward Smith"
+      - cell "edward@example.com"
+      - cell "user"
+      - cell "inactive"
+      - cell:
+        - group:
+          - button ""
+          - button ""
+    - row "1755257493775.8242 Fiona Taylor fiona@example.com user active":
+      - cell:
+        - checkbox
+      - cell "1755257493775.8242"
+      - cell "Fiona Taylor"
+      - cell "fiona@example.com"
+      - cell "user"
+      - cell "active"
+      - cell:
+        - group:
+          - button ""
+          - button ""
+- heading "5" [level=5]
+- paragraph: Total Users
+- heading "4" [level=5]
+- paragraph: Active Users
+- heading "1" [level=5]
+- paragraph: Admin Users
+```

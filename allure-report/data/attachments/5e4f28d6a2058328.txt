@@ -1,0 +1,44 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - text:  Data validated successfully (local mode)!
+  - button
+  - link " JUnit Testing Examples":
+    - /url: /
+  - list:
+    - listitem:
+      - link "Dashboard":
+        - /url: /
+    - listitem:
+      - link "Calculator":
+        - /url: /calculator.html
+    - listitem:
+      - link "Users":
+        - /url: /users.html
+    - listitem:
+      - link "Data Processing":
+        - /url: /data.html
+- heading " Data Processing" [level=1]
+- heading "Data Input" [level=5]
+- text: Enter Data (comma-separated numbers)
+- textbox "Enter Data (comma-separated numbers)": 95, 21, 6, 57, 11, 56, 23, 100, 78, 81, 30, 38, 45, 7, 81, 32, 62, 78, 44, 61
+- text: Quick Data Sets
+- 'button "Sample: 1-10"'
+- 'button "Sample: Random 20"'
+- 'button "Sample: Large Dataset"'
+- button "Clear Data"
+- heading "Basic Analysis" [level=5]
+- button " Analyze Data"
+- button " Validate"
+- button " Sort"
+- heading "Data Transformation" [level=5]
+- button " Double Values"
+- button " Square Values"
+- spinbutton
+- button " Filter >"
+- heading "Results" [level=5]
+- heading " Validation Results" [level=5]
+- text: "Has Negatives: No Has Decimals: No Has Outliers: No Has Duplicates: Yes Duplicate Values: 81, 78 Integers: 20 Floats: 0"
+- heading "Data Visualization" [level=5]
+```

@@ -1,0 +1,51 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - text:  All values doubled successfully!
+  - button
+  - text:  Data validated successfully (local mode)!
+  - button
+  - text:  Data processed successfully (local mode)!
+  - button
+  - text:  Large dataset (100 numbers) loaded successfully!
+  - button
+  - link " JUnit Testing Examples":
+    - /url: /
+  - list:
+    - listitem:
+      - link "Dashboard":
+        - /url: /
+    - listitem:
+      - link "Calculator":
+        - /url: /calculator.html
+    - listitem:
+      - link "Users":
+        - /url: /users.html
+    - listitem:
+      - link "Data Processing":
+        - /url: /data.html
+- heading " Data Processing" [level=1]
+- heading "Data Input" [level=5]
+- text: Enter Data (comma-separated numbers)
+- textbox "Enter Data (comma-separated numbers)": 1806, 1264, 1216, 1620, 1274, 1868, 942, 862, 1662, 272, 1488, 1486, 318, 422, 1414, 1142, 1604, 884, 364, 1632, 82, 1834, 118, 230, 1924, 1500, 12, 1950, 1514, 1760, 1354, 596, 786, 1616, 1482, 850, 1492, 818, 262, 1156, 1522, 692, 1644, 888, 236, 1540, 848, 1458, 524, 272, 1440, 1316, 574, 1766, 242, 872, 1364, 692, 1610, 748, 1070, 92, 1372, 488, 364, 38, 1676, 124, 322, 1776, 1274, 212, 552, 220, 552, 1900, 708, 1164, 998, 1524, 72, 556, 1254, 1722, 864, 1000, 1862, 1260, 738, 604, 924, 1458, 1692, 1364, 400, 1526, 660, 900, 658, 522
+- text: Quick Data Sets
+- 'button "Sample: 1-10"'
+- 'button "Sample: Random 20"'
+- 'button "Sample: Large Dataset"'
+- button "Clear Data"
+- heading "Basic Analysis" [level=5]
+- button " Analyze Data"
+- button " Validate"
+- button " Sort"
+- heading "Data Transformation" [level=5]
+- button " Double Values"
+- button " Square Values"
+- spinbutton: "1000"
+- button " Filter >"
+- heading "Results" [level=5]
+- alert:  Process some data to see results here.
+- heading "Data Visualization" [level=5]
+- text: 
+- paragraph: Charts will appear here after processing data
+```
