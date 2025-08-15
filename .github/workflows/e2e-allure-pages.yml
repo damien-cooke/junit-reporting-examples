@@ -41,13 +41,36 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright tests and generate Allure report
-        run: npm run test:playwright:allure
+      - name: Install Extent reporter (playwright-extent-reporter)
+        run: npm i -D playwright-extent-reporter@^1.2.0
 
-      - name: Upload Allure report as Pages artifact
+      - name: Run Playwright tests (Allure + Extent) and generate Allure report
+        run: npm run test:playwright:allure
+        env:
+          PLAYWRIGHT_EXTENT: '1'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run Robot Framework tests
+        run: |
+          npm run robot:venv
+          npm run robot:test
+
+      - name: Stage reports for Pages (Allure + Robot)
+        run: |
+          rm -rf pages
+          mkdir -p pages/allure pages/robot
+          cp -r allure-report/* pages/allure/
+          cp -r robot/output/* pages/robot/
+          npm run extent:stage
+
+      - name: Upload Pages artifact (multi-report)
         uses: actions/upload-pages-artifact@v3
         with:
-          path: allure-report
+          path: pages
 
   deploy:
     needs: test-and-build-report

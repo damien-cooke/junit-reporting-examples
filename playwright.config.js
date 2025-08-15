@@ -5,24 +5,32 @@ import { defineConfig, devices } from '@playwright/test';
  */
 const enableBranded = !!process.env.PLAYWRIGHT_BRANDED;
 
+// Build reporters dynamically to optionally include Extent reporter
+const reporters = [
+  ['html', { open: 'never' }],
+  ['junit', { outputFile: 'test-results/playwright-results.xml' }],
+  ['json', { outputFile: 'test-results/playwright-results.json' }],
+  // Allure results for Playwright E2E tests
+  ['allure-playwright', { outputFolder: 'allure-results' }],
+];
+
+if (process.env.PLAYWRIGHT_EXTENT === '1') {
+  // Adds Extent HTML reporter (installed in CI without altering package-lock)
+  reporters.push(['playwright-extent-reporter', { outputFolder: 'extent-report' }]);
+}
+
 export default defineConfig({
   testDir: './tests/playwright',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
-  /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
-  /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  /* Retry on CI only (set to 0 for speed) */
+  retries: process.env.CI ? 0 : 0,
+  /* Use multiple workers on CI for parallelism */
+  workers: process.env.CI ? '100%' : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [
-    ['html', { open: 'never' }],
-    ['junit', { outputFile: 'test-results/playwright-results.xml' }],
-  ['json', { outputFile: 'test-results/playwright-results.json' }],
-  // Allure results for Playwright E2E tests
-  ['allure-playwright', { outputFolder: 'allure-results' }]
-  ],
+  reporter: reporters,
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
