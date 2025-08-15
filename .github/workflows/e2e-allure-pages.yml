@@ -41,10 +41,9 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Install Extent reporter (playwright-extent-reporter)
-        run: npm i -D playwright-extent-reporter@^1.2.0
-
-      - name: Run Playwright tests (Allure + Extent) and generate Allure report
+      - name: Install Monocart reporter
+        run: npm i -D monocart-reporter@^2.9.21
+      - name: Run Playwright tests (Allure + Monocart) and generate Allure report
         run: npm run test:playwright:allure
         env:
           PLAYWRIGHT_EXTENT: '1'

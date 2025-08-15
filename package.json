@@ -22,7 +22,7 @@
   "robot:venv": "python3 -m venv .venv && . .venv/bin/activate && pip install -U pip && pip install -r robot/requirements.txt && rfbrowser init",
   "robot:test": ". .venv/bin/activate && robot -d robot/output robot/tests.robot",
   "robot:stage": "rm -rf pages/robot && mkdir -p pages/robot && cp -r robot/output/* pages/robot/",
-  "extent:stage": "if [ -d extent-report ]; then rm -rf pages/extent && mkdir -p pages/extent && cp -r extent-report/* pages/extent/; fi",
+  "extent:stage": "if [ -f monocart-report/index.html ]; then rm -rf pages/extent && mkdir -p pages/extent && cp monocart-report/index.html pages/extent/index.html; fi",
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
     "playwright:install": "playwright install"
@@ -44,7 +44,7 @@
     "jest": "^29.7.0",
     "jest-junit": "^16.0.0",
     "nodemon": "^3.0.1",
-    "playwright": "^1.54.2",
+  "playwright": "^1.54.2",
     "supertest": "^6.3.3"
   },
   "dependencies": {

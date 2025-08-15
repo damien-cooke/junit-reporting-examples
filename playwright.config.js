@@ -15,8 +15,11 @@ const reporters = [
 ];
 
 if (process.env.PLAYWRIGHT_EXTENT === '1') {
-  // Adds Extent HTML reporter (installed in CI without altering package-lock)
-  reporters.push(['playwright-extent-reporter', { outputFolder: 'extent-report' }]);
+  // Adds Monocart HTML reporter (single-file report) when enabled via env
+  reporters.push([
+    'monocart-reporter',
+    { name: 'Playwright Monocart Report', outputFile: './monocart-report/index.html' }
+  ]);
 }
 
 export default defineConfig({
