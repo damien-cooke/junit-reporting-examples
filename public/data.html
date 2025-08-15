@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Processing - JUnit Testing Examples</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-flask me-2"></i>
+                JUnit Testing Examples
+            </a>
+            <div class="navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/calculator.html">Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users.html">Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/data.html">Data Processing</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center mb-4">
+                    <i class="fas fa-chart-bar text-primary me-2"></i>
+                    Data Processing
+                </h1>
+
+                <!-- Data Input -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0">Data Input</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <label for="data-input" class="form-label">Enter Data (comma-separated numbers)</label>
+                                <textarea class="form-control" id="data-input" data-testid="data-input" rows="4" 
+                                    placeholder="Example: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10"></textarea>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Quick Data Sets</label>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-outline-primary btn-sm" id="load-sample-1" data-testid="load-sample-1">
+                                        Sample: 1-10
+                                    </button>
+                                    <button class="btn btn-outline-success btn-sm" id="load-sample-2" data-testid="load-sample-2">
+                                        Sample: Random 20
+                                    </button>
+                                    <button class="btn btn-outline-info btn-sm" id="load-sample-3" data-testid="load-sample-3">
+                                        Sample: Large Dataset
+                                    </button>
+                                    <button class="btn btn-outline-warning btn-sm" id="clear-data" data-testid="clear-data">
+                                        Clear Data
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Processing Operations -->
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Basic Analysis</h5>
+                            </div>
+                            <div class="card-body">
+                                <button class="btn btn-primary w-100 mb-2" id="process-data" data-testid="process-data">
+                                    <i class="fas fa-chart-line me-1"></i>Analyze Data
+                                </button>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <button class="btn btn-success w-100 mb-2" id="validate-data" data-testid="validate-data">
+                                            <i class="fas fa-check-circle me-1"></i>Validate
+                                        </button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn-info w-100 mb-2" id="sort-data" data-testid="sort-data">
+                                            <i class="fas fa-sort me-1"></i>Sort
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Data Transformation</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row mb-2">
+                                    <div class="col-6">
+                                        <button class="btn btn-warning w-100" id="double-data" data-testid="double-data">
+                                            <i class="fas fa-times me-1"></i>Double Values
+                                        </button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn-secondary w-100" id="square-data" data-testid="square-data">
+                                            <i class="fas fa-square me-1"></i>Square Values
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="input-group">
+                                            <input type="number" class="form-control" id="filter-value" data-testid="filter-value" placeholder="Filter threshold">
+                                            <button class="btn btn-danger" id="filter-data" data-testid="filter-data">
+                                                <i class="fas fa-filter me-1"></i>Filter >
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Display -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0">Results</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="results-container" data-testid="results-container">
+                            <div class="alert alert-info" role="alert">
+                                <i class="fas fa-info-circle me-2"></i>
+                                Process some data to see results here.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Visualization -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Data Visualization</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="chart-container" data-testid="chart-container">
+                            <div class="text-center text-muted">
+                                <i class="fas fa-chart-bar fa-4x mb-3"></i>
+                                <p>Charts will appear here after processing data</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/data.js"></script>
+</body>
+</html>

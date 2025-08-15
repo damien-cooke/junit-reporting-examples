@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Special Test Scenarios for JUnit Reporting Snapshot Tests array snapshot 1`] = `
+[
+  {
+    "id": 1,
+    "name": "Item 1",
+  },
+  {
+    "id": 2,
+    "name": "Item 2",
+  },
+  {
+    "id": 3,
+    "name": "Item 3",
+  },
+]
+`;
+
+exports[`Special Test Scenarios for JUnit Reporting Snapshot Tests object snapshot 1`] = `
+{
+  "created": 2023-01-01T00:00:00.000Z,
+  "id": 1,
+  "metadata": {
+    "tags": [
+      "test",
+      "snapshot",
+    ],
+    "version": "1.0.0",
+  },
+  "name": "Test Object",
+}
+`;
